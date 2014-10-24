@@ -2,27 +2,83 @@
 *.slo
 *.lo
 *.o
-*.obj
+#include<iostream>
+#include<conio.h>
+using namespace std;
+enum calisan_durumu{acliksiniri,ortahalli,iyidurumda};
+	struct calisan
+	{
+       
+	   int employee_number;
+	   float employee_cost;
+	   enum calisan_durumu pay;
+	}eleman1,eleman2,eleman3;
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+int main()
+{
+	cout<<"1.Calisanin numarasini giriniz:   ";
+	cin>>eleman1.employee_number;
+	cout<<"1.Calisanin maasini giriniz:   ";
+	cin>>eleman1.employee_cost;
+	    
+	cout<<endl<<"2.Calisanin numarasini giriniz:   ";
+	cin>>eleman2.employee_number;
+	cout<<"2.Calisanin maasini giriniz:   ";
+	cin>>eleman2.employee_cost;
+	
+	cout<<endl<<"3.Calisanin numarasini giriniz:   ";
+	cin>>eleman3.employee_number;
+	cout<<"3.Calisanin maasini giriniz:   ";
+	cin>>eleman3.employee_cost;
+	cout<<endl;
+	cout<<endl;
+	
+	cout<<endl<<"1.Calisanin numarasi:   "<<eleman1.employee_number;
+	cout<<endl<<"1.Calisanin maasi:   "<<eleman1.employee_cost<<endl;
+	if ( eleman1.employee_cost<600)
+        eleman1.pay = acliksiniri;
+    else if (eleman1.employee_cost>=600 && eleman1.employee_cost<1500 )
+         eleman1.pay = ortahalli;
+    else if (eleman1.employee_cost>=1500)
+         eleman1.pay= iyidurumda;
+         
+        cout<<"1.Calisanin durumu :   ";
+        switch (eleman1.pay) {
+               case 0 : cout << "acliksiniri" << endl;break;
+               case 1 : cout << "ortahalli" << endl;break;
+               case 2 : cout << "iyidurumda" << endl;break;}
+	
+    
+    cout<<endl<<"2.Calisanin numarasi:   "<<eleman2.employee_number;
+	cout<<endl<<"2.Calisanin maasi:   "<<eleman2.employee_cost<<endl;
+	if ( eleman2.employee_cost<600)
+        eleman2.pay = acliksiniri;
+    else if (eleman2.employee_cost>=600 && eleman2.employee_cost<1500 )
+         eleman2.pay = ortahalli;
+    else if (eleman2.employee_cost>=1500)
+         eleman2.pay= iyidurumda;
+         
+        cout<<"2.Calisanin durumu :   ";
+        switch (eleman2.pay) {
+               case 0 : cout << "acliksiniri" << endl;break;
+               case 1 : cout << "ortahalli" << endl;break;
+               case 2 : cout << "iyidurumda" << endl;break;}
+	
+    cout<<endl<<"3.Calisanin numarasi:   "<<eleman3.employee_number;
+	cout<<endl<<"3.Calisanin maasi:   "<<eleman3.employee_cost<<endl;
+		if ( eleman3.employee_cost<600)
+        eleman3.pay = acliksiniri;
+    else if (eleman3.employee_cost>=600 && eleman3.employee_cost<1500 )
+         eleman3.pay = ortahalli;
+    else if (eleman3.employee_cost>=1500)
+        eleman3.pay = iyidurumda;
+ 	   cout<<"3.Calisanin durumu :    ";
+   	   switch (eleman3.pay) {
+               case 0 : cout << "acliksiniri" << endl;break;
+               case 1 : cout << "ortahalli" << endl;break;
+               case 2 : cout << "iyidurumda" << endl;break;}
+	
+   	   getch();
+   	   return 0;
+     
+}
