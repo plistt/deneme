@@ -1,7 +1,3 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
 #include<iostream>
 #include<conio.h>
 using namespace std;
